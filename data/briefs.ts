@@ -22,6 +22,135 @@ export type Brief = {
 
 export const briefs: Brief[] = [
   {
+    slug: "a-game-release-becomes-a-cultural-event",
+    number: "08",
+    title: "A Game Release Becomes a Cultural Event",
+    subtitle:
+      "Grand Theft Auto VI, the long wait, and a launch shared across time zones",
+    summary:
+      "The UK launch of Grand Theft Auto VI brought fans, creators, and the games business into a shared cultural moment.",
+    source: "BBC News",
+    sourceUrl: "https://www.bbc.com/news/live/c60rkg21dl22t",
+    image: "/assets/brief08.webp",
+    imageAlt: "Grand Theft Auto VI advertisements on billboards above a street",
+    category: "Culture",
+    publishedAt: "2026-11-19",
+    relatedSurfaces: ["Games", "Creator economy", "Digital culture"],
+    blocks: [
+      {
+        type: "paragraph",
+        text: "After a 13-year wait for a new installment, Grand Theft Auto VI launched in the UK, with availability rolling across time zones. BBC News followed the release through fans' first reactions, watch parties, and creators anticipating a new wave of audience attention.",
+      },
+      {
+        type: "section-list",
+        heading: "Beyond the launch window",
+        items: [
+          "The game is set in the fictional US state of Leonida and features the series' first playable female protagonist in a 3D setting.",
+          "The staggered release turned a single launch into a sequence of local moments, each with its own communities and first impressions.",
+          "For creators who built audiences around the previous installment, the release represents a new cycle of play, commentary, and online participation.",
+        ],
+      },
+      {
+        type: "section",
+        heading: "Why it matters for operators",
+        text: "A major cultural release is more than a product announcement. It concentrates attention, activates communities, and creates new opportunities for people whose work sits around the product. The response is shaped by the experience itself as much as by the campaign around it.",
+      },
+      {
+        type: "section",
+        heading: "Process implication",
+        text: "Treat culture as a live signal. Listen to how different communities interpret a release, notice where participation forms, and distinguish durable enthusiasm from the noise of launch day.",
+      },
+    ],
+  },
+  {
+    slug: "the-trust-layer-is-the-attack-surface",
+    number: "07",
+    title: "The Trust Layer Is the Attack Surface",
+    subtitle:
+      "A campaign targeting 178 websites puts crypto theft and iPhone infection in view",
+    summary:
+      "A reported cyberattack targeted 178 major websites, including CNN and Zoom, with the stated aim of stealing cryptocurrency and infecting iPhones.",
+    source: "Homeland Security Today",
+    sourceUrl:
+      "https://www.hstoday.us/subject-matter-areas/cybersecurity/cyberattack-hits-178-major-websites-including-cnn-and-zoom-in-bid-to-steal-crypto-infect-iphones/",
+    image: "/assets/brief07.webp",
+    imageAlt: "A masked figure at a computer in a blue-lit room",
+    category: "Cybersecurity",
+    publishedAt: "2026-11-19",
+    relatedSurfaces: ["Digital trust", "Incident response", "User security"],
+    blocks: [
+      {
+        type: "paragraph",
+        text: "Homeland Security Today reports a cyberattack targeting 178 major websites, including CNN and Zoom, in an effort to steal cryptocurrency and infect iPhones. The breadth of the reported target set makes this a reminder that familiar digital surfaces can become part of a security incident.",
+      },
+      {
+        type: "paragraph",
+        text: "The report describes the campaign's stated goals; it should not be read as evidence that every listed site or every visitor was compromised. Establishing exposure depends on the incident details and verified signals from the organizations and devices involved.",
+      },
+      {
+        type: "section",
+        heading: "Why it matters for operators",
+        text: "Trust is part of the attack surface. People make decisions based on the sites and services they recognize, while organizations depend on web infrastructure and user devices that they may not fully control. A response has to separate confirmed impact from broad assumptions quickly.",
+      },
+      {
+        type: "section-list",
+        heading: "The operator response",
+        items: [
+          "Verify alerts and incident updates through trusted, official channels.",
+          "Use web and endpoint telemetry to determine which users, services, and dependencies were actually exposed.",
+          "Make customer guidance specific to confirmed risk, and update it as the investigation develops.",
+        ],
+      },
+      {
+        type: "section",
+        heading: "Process implication",
+        text: "A useful incident process connects technical evidence to clear user communication. The faster an organization can establish what happened, who may be affected, and what action is warranted, the less uncertainty becomes a second incident.",
+      },
+    ],
+  },
+  {
+    slug: "when-banking-goes-dark",
+    number: "06",
+    title: "When Banking Goes Dark",
+    subtitle:
+      "A technical issue at one bank ripples through shared financial services",
+    summary:
+      "Reported online banking outages showed how a technical issue in an interconnected financial system can affect customers across institutions.",
+    source: "CBS News MoneyWatch",
+    sourceUrl:
+      "https://www.cbsnews.com/news/banks-online-service-outages-jpmorgan-chase-bank-of-america-wells-fargo/",
+    image: "/assets/brief06.webp",
+    imageAlt: "A Chase bank sign on the exterior of a building",
+    category: "Finance",
+    publishedAt: "2026-11-19",
+    relatedSurfaces: ["Payments", "System resilience", "Customer operations"],
+    blocks: [
+      {
+        type: "paragraph",
+        text: "On November 16, customers reported trouble accessing online services at several major US banks, including JPMorgan Chase, Bank of America, and US Bank. CBS News reported that Chase attributed its disruption to a technical bug, not a cyberattack, and said transactions involving other institutions were affected. Reports had returned to normal by early Tuesday.",
+      },
+      {
+        type: "section-list",
+        heading: "What the incident showed",
+        items: [
+          "Customers reported issues with sign-in, balances, transfers, and other digital banking services.",
+          "The reported impact crossed institutional boundaries, with shared transactions and payment services connecting customer experiences.",
+          "Banks gave different updates about their own systems, underscoring the need to distinguish customer reports from confirmed service impact.",
+        ],
+      },
+      {
+        type: "section",
+        heading: "Why it matters for operators",
+        text: "Financial resilience is shaped by dependencies, not just by the uptime of a single brand. A fault at a central participant can surface as a much wider customer problem, even when institutions and services experience different effects.",
+      },
+      {
+        type: "section",
+        heading: "The line",
+        text: "Map critical service dependencies before an incident. During an outage, give customers clear, verified updates; after recovery, reconcile delayed transactions and capture what failed across the system, not only within one institution.",
+      },
+    ],
+  },
+  {
     slug: "discovery-itself-is-accelerating",
     number: "05",
     title: "Discovery Itself Is Accelerating",

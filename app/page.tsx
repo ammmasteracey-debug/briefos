@@ -36,8 +36,11 @@ export default async function Home({
       (!selectedSource || brief.source === selectedSource) &&
       (!selectedCategory || brief.category === selectedCategory),
   );
-  const featuredBrief = briefs[0];
-  const latestBriefs = briefs.slice(1, 4);
+  const featuredBrief =
+    briefs.find((brief) => brief.number === "05") ?? briefs[0];
+  const latestBriefs = briefs
+    .filter((brief) => brief.slug !== featuredBrief.slug)
+    .slice(0, 3);
   const hasFilters = Boolean(selectedSource || selectedCategory);
 
   return (
@@ -46,7 +49,7 @@ export default async function Home({
       <SiteHeader />
       <div className="publication-line">
         <span>Curated intelligence for operators</span>
-        <span>Vol. 01 &nbsp;·&nbsp; {formatDate(featuredBrief.publishedAt)}</span>
+        <span>Vol. 01 &nbsp;·&nbsp; {formatDate(briefs[0].publishedAt)}</span>
       </div>
 
       <section className="masthead" aria-labelledby="publication-title">
