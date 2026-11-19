@@ -11,6 +11,9 @@ export type Brief = {
   subtitle: string;
   summary: string;
   source: string;
+  sourceUrl: string;
+  image: string;
+  imageAlt: string;
   category: string;
   publishedAt: string;
   relatedSurfaces: string[];
@@ -26,6 +29,10 @@ export const briefs: Brief[] = [
     summary:
       "AI systems are contributing to research-level mathematics and physics, compressing discovery across domains.",
     source: "Research community",
+    sourceUrl:
+      "https://www.scientificamerican.com/article/ai-is-disrupting-math-is-science-next/",
+    image: "/assets/brief05.avif",
+    imageAlt: "OpenAI event signage seen above a crowd",
     category: "Research",
     publishedAt: "2026-11-18",
     relatedSurfaces: ["Desk OS", "Agent activity"],
@@ -63,6 +70,9 @@ export const briefs: Brief[] = [
     summary:
       "Atlas hardware is designed around simulation and learning, shifting physical work toward policies trained at scale.",
     source: "Boston Dynamics",
+    sourceUrl: "https://bostondynamics.com/blog/robot-hands-for-modern-ai-and-real-work/",
+    image: "/assets/brief02.jpg",
+    imageAlt: "Boston Dynamics Atlas robot demonstrating a hand tool",
     category: "Robotics",
     publishedAt: "2026-11-18",
     relatedSurfaces: ["Desk OS", "Agent workflows"],
@@ -95,6 +105,9 @@ export const briefs: Brief[] = [
     summary:
       "Neuralink’s early VOICE trial results put thought-to-speech in human trials, with visible and emotionally salient results.",
     source: "Neuralink",
+    sourceUrl: "https://neuralink.com/updates/72-hour-voice-hackathon/",
+    image: "/assets/brief03.avif",
+    imageAlt: "A person using a neural interface device at home",
     category: "Neurotechnology",
     publishedAt: "2026-11-18",
     relatedSurfaces: ["Desk OS", "Human process"],
@@ -128,6 +141,10 @@ export const briefs: Brief[] = [
     summary:
       "Biomolecular prediction, annotation, and protein design are extending from computational results to measured activity.",
     source: "Google DeepMind & collaborators",
+    sourceUrl:
+      "https://www.drugdiscoverytrends.com/alphafold-redefining-drug-discovery-with-digital-biology-and-ai/",
+    image: "/assets/brief04.jpg",
+    imageAlt: "A colorful molecular structure visualization",
     category: "Biology",
     publishedAt: "2026-11-18",
     relatedSurfaces: ["Desk OS", "Research"],
@@ -165,6 +182,9 @@ export const briefs: Brief[] = [
     summary:
       "Frontier capability is becoming cheaper and more usable; directed process is now the scarce resource.",
     source: "OpenAI",
+    sourceUrl: "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+    image: "/assets/brief01.webp",
+    imageAlt: "An abstract blue face framed by digital circuitry",
     category: "Models",
     publishedAt: "2026-11-18",
     relatedSurfaces: ["Desk OS", "Agent workflows"],

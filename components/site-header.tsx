@@ -24,6 +24,7 @@ export function SiteHeader() {
           </Link>
         ))}
         <Link href="/archive">ARCHIVE</Link>
+        <Link href="/stocks">STOCK LIST</Link>
       </nav>
     </header>
   );

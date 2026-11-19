@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BriefCard } from "@/components/brief-card";
@@ -71,7 +72,24 @@ export default async function BriefDetail({
               {formatDate(brief.publishedAt)}
             </time>
           </div>
+          <a
+            className="source-link"
+            href={brief.sourceUrl}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Explore the original source <span aria-hidden="true">↗</span>
+          </a>
         </header>
+
+        <div className="detail-image-frame">
+          <Image
+            alt={brief.imageAlt}
+            fill
+            sizes="(max-width: 820px) 100vw, 780px"
+            src={brief.image}
+          />
+        </div>
 
         <div className="detail-body">
           {brief.blocks.map((block, index) => {

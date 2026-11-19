@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { BriefCard } from "@/components/brief-card";
+import { BriefSlideshow } from "@/components/brief-slideshow";
+import { LandingLoader } from "@/components/landing-loader";
 import { SiteHeader } from "@/components/site-header";
 import { briefs, categories, categorySlug, sources } from "@/data/briefs";
 
@@ -35,11 +37,23 @@ export default async function Home({
       (!selectedCategory || brief.category === selectedCategory),
   );
   const featuredBrief = briefs[0];
+  const slides = [...briefs]
+    .sort((first, second) => first.number.localeCompare(second.number))
+    .map(({ slug, number, title, subtitle, category, image, imageAlt }) => ({
+      slug,
+      number,
+      title,
+      subtitle,
+      category,
+      image,
+      imageAlt,
+    }));
   const latestBriefs = briefs.slice(1, 4);
   const hasFilters = Boolean(selectedSource || selectedCategory);
 
   return (
     <main className="page-shell">
+      <LandingLoader />
       <SiteHeader />
       <div className="publication-line">
         <span>Curated intelligence for operators</span>
@@ -52,26 +66,7 @@ export default async function Home({
         <p>Process intelligence, made legible.</p>
       </section>
 
-      <section className="lead-story" aria-labelledby="lead-title">
-        <div className="lead-copy">
-          <p className="eyebrow">The lead &nbsp;·&nbsp; {featuredBrief.category}</p>
-          <h2 id="lead-title">{featuredBrief.title}</h2>
-          <p className="lead-subtitle">{featuredBrief.subtitle}</p>
-          <p className="lead-summary">{featuredBrief.summary}</p>
-          <div className="story-byline">
-            <span>{featuredBrief.source}</span>
-            <span>{formatDate(featuredBrief.publishedAt)}</span>
-          </div>
-          <Link className="text-link" href={`/brief/${featuredBrief.slug}`}>
-            Read the story <span aria-hidden="true">→</span>
-          </Link>
-        </div>
-        <div className="lead-art" aria-hidden="true">
-          <span className="lead-art-label">FIELD NOTES / 0{featuredBrief.number}</span>
-          <span className="lead-art-mark">K</span>
-          <span className="lead-art-caption">Signals from the frontier</span>
-        </div>
-      </section>
+      <BriefSlideshow slides={slides} />
 
       <section className="latest-section" aria-labelledby="latest-title">
         <div className="section-heading">
