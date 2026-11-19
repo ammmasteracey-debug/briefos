@@ -15,16 +15,18 @@ export function BriefCard({
         className="brief-card-link"
         href={`/brief/${brief.slug}`}
       >
-        {variant === "card" && (
-          <div className="brief-card-image">
-            <Image
-              alt={brief.imageAlt}
-              fill
-              sizes="(max-width: 560px) 100vw, (max-width: 820px) 50vw, 33vw"
-              src={brief.image}
-            />
-          </div>
-        )}
+        <div className="brief-card-image">
+          <Image
+            alt={brief.imageAlt}
+            fill
+            sizes={
+              variant === "row"
+                ? "(max-width: 560px) 92px, 150px"
+                : "(max-width: 560px) 100vw, (max-width: 820px) 50vw, 33vw"
+            }
+            src={brief.image}
+          />
+        </div>
         <div className="brief-card-topline">
           <span className="brief-category">{brief.category}</span>
           <span className="brief-number">{brief.publishedAt}</span>
